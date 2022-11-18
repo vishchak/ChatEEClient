@@ -1,7 +1,7 @@
 package ua.kiev.prog;
 
 import ua.kiev.prog.exceptions.NoLoginException;
-import ua.kiev.prog.registration.Register;
+import ua.kiev.prog.authorization.Authorization;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         try {
-            String login = String.valueOf(Register.register(sc));
+            String login = Authorization.authorization(sc);
 
             Thread th = new Thread(new GetThread());
             th.setDaemon(true);

@@ -1,4 +1,4 @@
-package ua.kiev.prog.registration;
+package ua.kiev.prog.authorization;
 
 import ua.kiev.prog.Utils;
 import ua.kiev.prog.exceptions.NoLoginException;
@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class Register {
     public static String register(Scanner sc) throws IOException, NoLoginException {
+        sc.nextLine();
         System.out.println("Create new login:");
         String login = sc.nextLine();
         System.out.println("Create password: ");
